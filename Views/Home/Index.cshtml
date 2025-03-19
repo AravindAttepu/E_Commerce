@@ -1,0 +1,159 @@
+﻿@{
+   
+    @model string
+
+
+}
+@* <h2>User Profile</h2>
+<p><strong>Name:</strong> @Model</p>
+<p><strong>Email:</strong> @Model</p> *@
+<div class="homepage">
+    <div class="homeintro">
+        <div class="homeintrotext1">
+        <div class="homeintrotext">
+            <h3>Elevate your Tech Gadget Game</h3>
+            <p>Innovation Redefined, Power Unleashed!</p>
+            <a class="anchordecor" href="/products/9">Shop Now</a>
+
+
+        </div>
+        </div>
+        <div class="homeintroimg">
+            <img src="assets/images/samsungs25.png" alt="">
+        </div>
+
+    </div>
+    <div class="homecontents">
+        <div class="serviceshead">
+            <p style="margin-bottom: 10px;"><span style="color:#6b7280; margin-bottom: 0px;">OUR</span> <span>SERVICES</span></p>
+            <p style="font-size: 14px; font-weight: 300; color:#6b7280">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+        </div>
+        <div class="services">
+    <div class="service">
+        <div class="serviceheading">
+            <h3 style="font-weight: 700; font-size: 25px;">Free Shipping</h3>
+            <p>Special for orders above Rs.999 all over India</p>
+            <a class="anchordecor" style="padding:5px; font-size: 15px;" href="/products">Shop Now</a>
+        </div>
+        <div class="serviceimg">
+            <img src="assets/images/shipping.png" alt="Shipping">
+        </div>
+    </div>
+    
+    <div class="service">
+        <div class="serviceheading">
+            <h3 style="font-weight: 700; font-size: 25px;">Great Discounts</h3>
+            <p>Cozy up to these great deals</p>
+            <a class="anchordecor" style="padding:5px; font-size: 15px;" href="/products">Shop Now</a>
+        </div>
+        <div class="serviceimg">
+            <img src="assets/images/discount.png" alt="Discount">
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="serviceheading">
+            <h3 style="font-weight: 700; font-size: 25px;">Customer Care</h3>
+            <p>We’re here to help you, every step of the way.</p>
+            <a class="anchordecor" style="padding:5px; font-size: 15px;" href="/products">Shop Now</a>
+        </div>
+        <div class="serviceimg">
+            <img src="assets/images/customercare.png" alt="Customer Care">
+        </div>
+    </div>
+</div>
+
+
+        <div class="newproducts">
+            <div class="newproductsheadline serviceshead">
+                <p style="margin-bottom: 10px;"><span style="color:#6b7280; margin-bottom: 0px;">NEW</span> <span>PRODUCTS</span></p>
+            <p style="font-size: 14px; font-weight: 300; color:#6b7280">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+            </div>
+      
+            <div class="newproductlist" id="products-container">
+                
+                    @* <div class="productimg">
+                        <img src="assets/images/imac.jpeg" alt="">
+                    </div>
+                    <div class="productdata">
+                        <div class="productcategory">Electronics</div>
+                        <div class="producttitle">Apple iMac M4</div>
+                       
+                        <div class="productprice"><span>Rs: </span><span id="price">99,999</span></div>
+                    </div>
+                    <div class="product-buttons">
+        <button asp-action="fetchproducts">Add to Cart</button>
+        <button>Buy Now</button>
+    </div>
+
+                </div>
+                <div class="productlist">
+                    
+                </div>
+                <div class="productlist">
+                    
+                </div>
+                <div class="productlist">
+                    
+                </div> *@
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    let products
+    async function fetchProducts() {
+        try {
+            const response = await fetch('fetchproducts'); // Fetch data from backend
+          products = await response.json(); // Convert response to JSON
+            console.log(products)
+            // Get the container
+            const container = document.getElementById('products-container');
+            container.innerHTML = ''; // Clear previous content
+
+            // Loop through products and generate HTML
+          products.slice().reverse().forEach(product => {
+                 const isOutOfStock = product.stock <= 0;
+                const productHTML = `
+                    <div class="productlist">
+                        <div class="productimg" onclick="goToProductPage(${product.productId})" style="position: relative;">
+                            <img src="images/${product.imageUrl}" alt="${product.productName}" style="opacity: ${isOutOfStock ? 0.5 : 1};">
+                             ${isOutOfStock ? `<div class="out-of-stock-label">Out of Stock</div>` : ""}
+                        </div>
+                        <div class="productdata">
+                            <div class="productcategory">${product.category}</div>
+                            <div class="producttitle">${product.productName}</div>
+                            <div class="productprice"><span>Rs: </span><span>${formatPrice(product.price)}</span></div>
+                        </div>
+                        <div class="product-buttons">
+                             <button class="btn btn-success" onclick="addToCart(${product.productId})" ${isOutOfStock ?  'style="cursor: not-allowed; opacity: 1.0;" disabled' : ""}>Add to Cart</button>
+                            @* <button>Buy Now</button> *@
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += productHTML;
+            });
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+    }
+function addToCart(productid)
+{
+let productdata= [...products]
+productdata = productdata.filter(p => p.productId === productid);
+addtocart(productdata)
+}
+    function goToProductPage(productId) {
+        window.location.href = `products/${productId}`;
+    }
+
+    function formatPrice(price) {
+        return price.toLocaleString('en-IN'); // Formats 99999 to 99,999
+    }
+
+    fetchProducts(); // Call function on page load
+</script>

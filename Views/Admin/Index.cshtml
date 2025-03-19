@@ -1,0 +1,104 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = "~/Views/Shared/_AdminMain.cshtml";
+}
+<style>
+    .container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+   select {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+h2 {
+    color: #333;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#preview img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+</style>
+  <div class="container">
+        <h2>Add Product</h2>
+      
+        <div class="form-group">
+            <input type="text" id="productName" placeholder="Product Name" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="description" placeholder="Description" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="price" placeholder="Price" required>
+        </div>
+       <select id="category" required>
+         <option value="" disabled selected>Select Category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Appliances">Appliances</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Books">Books</option>
+        <option value="Home">Home & Kitchen</option>
+         </select>
+         <div class="form-group">
+            <input type="number" id="stock" placeholder="Stock" required>
+        </div>
+        <div class="form-group">
+           <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" required>
+        </div>
+          <button type="button" id="uploadBtn">Upload</button>
+
+        <div id="preview"></div>
+    </div>
+    <script>
+        document.getElementById("uploadBtn").addEventListener("click", function (event) {
+    event.preventDefault();
+    uploadImage();
+});
+    </script>
+
+  <script src="/js/upload.js"></script>

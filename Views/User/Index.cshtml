@@ -1,0 +1,247 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+   
+   @model innobyte_e_commerce.Models.UserViewModel
+}
+ 
+<div class="usercontainer">
+<style>ul{
+  padding-left: 0;
+
+}</style>
+<div class="userdetails">
+    <div class="userimg"><img src="~/assets/userimages/defaultuser.jpg" alt=""></div>
+    <div class="userdata" id="userdata">
+               <h3 id="userName" style="font-weight: 700;">@Model.UserDetails.Name</h3>
+        <div class="user-details">
+            <p><strong>Email:</strong> <span id="userEmail">@Model.UserDetails.Email</span></p>
+            <p><strong>Phone:</strong> <span id="userPhone">@Model.UserDetails.Mobile</span></p>
+        </div>
+    </div>
+</div>
+
+
+@* <div class="cartitems">
+    <div class="carttitle">
+        <div class="carttotalitems"><span>Total Items</span><span id="totalitems"></span>
+        </div>
+        <div class="carttotalprice"><span>Total Price</span><span id="totalprice"></span></div>
+    </div>
+    <div class="cartitem">
+        <div class="cartitemimg"></div>
+        <div class="cartiteminfo">
+            <h3>oneplus</h3>
+        </div>
+        <div class="cartprice">
+            <div class="cartitemprice"><span>Items: 
+                <button class="quantity-btn" onclick="modifyTotalQuantity(userid,quantity, productid)">-</button>
+                <span id="total-items">0</span>
+                <button class="quantity-btn" onclick="modifyTotalQuantity(1)">+</button>
+            </span></div>
+            <div class="cartitemquantity"></div>
+        </div>
+    </div>
+</div> *@
+<div class="userbtnselection">
+    <div class="cartbtn"><button id="cartbtn"><strong>Cart</strong></button></div>
+    <div class="ordersbtn"><button id="orderbtn"><strong>Orders</strong></button></div>
+</div>
+<div class="userorders hidden" id="ordersblock">
+   
+    <div class="orders">
+        @if (Model.UserOrders.Any())
+{
+    <ul>
+        @foreach (var item in Model.UserOrders)
+        {
+            @* <li>@item.Product.ProductName - Quantity: @item.Quantity - Total: @item.Total - ProductID: @item.ProductID</li> *@
+                <div class="cartitem">
+        @* <div class="cartproductid">@item.ProductID</div> *@
+        <div class="cartitemimg" onclick="getitem(@item.Product.ProductId)"><img src="/images/@item.Product.ImageUrl" alt=""></div>
+        <div class="cartiteminfo">
+            <p>@item.Product.ProductName </p>
+        </div>
+        <div class="cartprice">
+            <div class="cartitemprice"><div class="price"><span>Rs: </span>@item.Product.Price</div><span>Items: 
+                
+                <span id="total-items">@item.Quantity</span>
+                
+            </span></div>
+            <div class="cartitemquantity"></div>
+        </div>
+    </div>
+        }
+    </ul>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}
+    </div>
+</div>
+    <div class="usercart " id="cartblock">
+    <div class="carthead">
+        @* <h3>Cart</h3> *@
+        @* <p>Total: <span> ₹@Model.GrandTotal.ToString("N2") </span></p> *@
+
+    </div>
+@if (Model.CartProducts.Any())
+{
+    <ul>
+        @foreach (var item in Model.CartProducts)
+        {
+            @* <li>@item.Product.ProductName - Quantity: @item.Quantity - Total: @item.Total - ProductID: @item.ProductID</li> *@
+                <div class="cartitem">
+        @* <div class="cartproductid">@item.ProductID</div> *@
+        <div class="cartitemimg" onclick="getitem(@item.Product.ProductId)"><img src="/images/@item.Product.ImageUrl" alt=""></div>
+        <div class="cartiteminfo">
+            <p>@item.Product.ProductName </p>
+        </div>
+        <div class="cartprice">
+            <div class="cartitemprice"><div class="price"><span>Rs: </span>@item.Product.Price</div><span>Items: 
+                <button class="quantity-btn" onclick="DeleteCartQuantity(@Model.UserDetails.UserID,@item.Product.Price,@item.Quantity-1, @item.Product.ProductId,this)">-</button>
+                <span id="total-items">@item.Quantity</span>
+                <button class="quantity-btn" onclick="addCartItem(@Model.UserDetails.UserID,@item.Product.Price, @item.Product.ProductId)">+</button>
+            </span></div>
+            <div class="cartitemquantity"></div>
+        </div>
+    </div>
+        }
+    </ul>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}
+
+@* <div class="orderbtn"><button onclick="setOrder()">Order</button></div> *@
+<div class="checkout">
+      <div class="checkoutdetailsbox">
+        <div class="checkouthead" ><span style="color: #6b7280;">CART </span><span>TOTALS</span></div>  
+      <div class="checksubdetails">
+        <div class="subtotal"> Subtotal</div> <div class="subtotalrupees"><span>Rs: </span>@Model.GrandTotal.ToString("N2")</div> </div>
+        @{
+            var fee = 0; // Default value
+            if (Model.GrandTotal > 0)
+            {
+                fee = 100;
+            }
+        }
+         <div class="checksubdetails">
+        <div class="subtotal"> Shipping Fee </div> <div class="subtotalrupees"><span>Rs: </span>@fee.ToString("N2")</div> </div>
+       <div class="checksubdetails">
+        <div class="subtotal"> Total</div> <div class="subtotalrupees"><span>Rs: </span> @Math.Ceiling(@Model.GrandTotal+fee).ToString("F2")</div> </div>
+     <div class="checksubdetails ">
+        <div class="subtotal"> </div> <div class="checkoutbtn"><button onclick="place_order()" >CHECKOUT</button></div> </div>
+   
+</div>
+</div>
+</div>
+</div>
+
+<script>
+      document.getElementById("cartbtn").style.backgroundColor="lightgray";
+         document.getElementById("orderbtn").style.backgroundColor="inherit"
+
+      document.getElementById("cartbtn").addEventListener("click", function () {
+        document.getElementById("cartblock").classList.remove("hidden");
+        document.getElementById("cartbtn").style.backgroundColor="lightgray";
+         document.getElementById("orderbtn").style.backgroundColor="inherit"
+        document.getElementById("ordersblock").classList.add("hidden");
+    });
+
+    document.getElementById("orderbtn").addEventListener("click", function () {
+        document.getElementById("ordersblock").classList.remove("hidden");
+         document.getElementById("cartbtn").style.backgroundColor="white";
+         document.getElementById("orderbtn").style.backgroundColor="lightgray"
+        document.getElementById("cartblock").classList.add("hidden");
+    });
+     function getitem(id)
+    {
+  window.location.href = "/products/"+id;
+
+    }
+
+    function getordertotal(total,fee)
+    {
+        return Math.ceil(total+fee)
+    }
+
+    async function  DeleteCartQuantity(userId,price,quantity, productId,Parent)
+    {
+       
+    try {
+        const response = await fetch("/Cart/DeleteCartQuantity", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                UserId: userId,
+                Price: price,
+                ProductId: productId
+            })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            console.log("Item added:", data);
+            showAlert("Item Deleted successfully!");
+             window.location.reload();
+        } else {
+            console.error("Error Removing item:", data);
+            showAlert(data.message || "Failed to Remove item.");
+        }
+    } catch (error) {
+        console.error("Request failed:", error);
+        showAlert("Something went wrong. Try again.");
+    }
+    
+    
+
+    }
+    async function addCartItem(userId, price, productId) {
+    try {
+        const response = await fetch("/Cart/AddCartQuantity", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                UserId: userId,
+                Price: price,
+                ProductId: productId
+            })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            console.log("Item added:", data);
+            showAlert("Item added successfully!");
+             window.location.reload();
+        } else {
+            console.error("Error adding item:", data);
+            showAlert(data.message || "Failed to add item.");
+        }
+    } catch (error) {
+        console.error("Request failed:", error);
+        showAlert("Something went wrong. Try again.");
+    }
+}
+function formatPrice(price) {
+        return price.toLocaleString('en-IN'); // Formats 99999 to 99,999
+    }
+    function place_order()
+    {
+        if(@Model.GrandTotal <=0)
+        { showAlert("Cart is Empty")
+        return;
+        }
+        else{
+        window.location.href = `Orders/place_order`
+        }
+    }
+
+</script>

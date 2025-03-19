@@ -1,0 +1,165 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+   
+}
+ @model innobyte_e_commerce.Models.Cart
+ <form>
+<div class="placeordercontainer">
+
+<div class="orderaddress">
+    <div class="addresshead"><span style="color:#6b7280">DELIVERY </span><span>INFORMATION</span></div>
+   
+    <div class="customeraddress">
+        <div class="lineblock">
+            <div class="semiblock" ><input type="text" id="firstName" placeholder="First name" required></div>
+            <div class="semiblock"><input type="text" id="lastName" placeholder="Last name" required></div>
+        </div>
+        <div class="lineblock"><input type="email" id="email" placeholder="Email address" required></div>
+        <div class="lineblock"><input type="text" id="street" placeholder="Street" required></div>
+        <div class="lineblock">
+            <div class="semiblock"><input type="text" id="city" placeholder="City" required></div>
+            <div class="semiblock"><input type="text" id="state" placeholder="State" required></div>
+        </div>
+        <div class="lineblock">
+            <div class="semiblock"><input type="number" id="zipcode" placeholder="Zipcode" required></div>
+            <div class="semiblock"><input type="text" id="country" placeholder="Country" required></div>
+        </div>
+        <div class="lineblock"><input type="tel" id="mobile" name="mobile" placeholder="Mobile number" pattern="[6-9][0-9]{9}" required></div>
+
+         </div>
+        
+
+    </div>
+  
+    @{
+            var fee = 0; // Default value
+            if (Model.GrandTotal > 0)
+            {
+                fee = 100;
+            }
+        }
+        @{ var isDisabled = Model.GrandTotal <= 0 ? "disabled" : ""; }
+    <div class="orderdetails">
+          <div class="checkoutdetailsbox">
+        <div class="checkouthead" ><span style="color: #6b7280;">CART </span><span>TOTALS</span></div>  
+      <div class="checksubdetails">
+        <div class="subtotal"> Subtotal</div> <div class="subtotalrupees"><span>Rs: </span>@Model.GrandTotal.ToString("N2")</div> </div>
+         <div class="checksubdetails">
+        <div class="subtotal"> Shipping Fee </div> <div class="subtotalrupees"><span>Rs: </span>@fee.ToString("N2")</div> </div>
+       <div class="checksubdetails">
+        <div class="subtotal"> Total</div> <div class="subtotalrupees"><span>Rs: </span>@Math.Ceiling(Model.GrandTotal+fee).ToString("N2")</div> </div>
+        <div class="checkouthead"  style=" font-size: 18px;"><span style="color: #6b7280;">PAYMENT </span><span>METHOD</span></div> 
+        <div class="checkouthead d-flex" style="flex-direction: row; justify-content: space-evenly;">
+            <div class="paymentblock" onclick="showAlert('Only COD Available');"><img src="/assets/images/razorpay.png" alt=""></div>
+            <div class="paymentblock" onclick="showAlert('Only COD Available');"><img src="/assets/images/stripe.png" alt=""></div>
+            <div class="paymentblock" style="width:max-content; border-color: black;"><span style="font-size: 12px;">CASH ON DELIVERY</span></div>
+        </div> 
+     <div class="checksubdetails ">
+        
+        <div class="subtotal"> </div> <div class="checkoutbtn"><button type="submit" id="checkoutBtn"  >CHECKOUT</button>
+</div> </div>
+   
+</div>
+@* @isDisabled *@
+ 
+    </div>
+   
+
+</div>
+<div class="orderpayment"></div>
+
+
+
+
+
+</div>
+</form>
+
+<script>
+ window.onload = function () {
+        document.querySelectorAll("input, textarea").forEach(field => field.value = "");
+    };
+     document.getElementById("checkoutBtn").addEventListener("click", validateAndSubmit);
+    function validateAndSubmit(event)
+    {
+       
+
+          event.preventDefault(); 
+          let inputs = document.querySelectorAll('.customeraddress input[required]');
+      let form = document.getElementById("checkoutForm");
+        let firstName = document.getElementById("firstName").value.trim();
+        let lastName = document.getElementById("lastName").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let street = document.getElementById("street").value.trim();
+        let city = String(document.getElementById("city").value).trim()
+        let state = document.getElementById("state").value.trim();
+        let zipcode = String(document.getElementById("zipcode").value).trim();
+        let country = document.getElementById("country").value.trim();
+        let mobile = document.getElementById("mobile").value.trim();
+
+         for (let input of inputs) {
+        if (!input.value.trim()) {
+            showAlert(`Please fill out the ${input.placeholder} field.`);
+            input.focus();
+            return; // Stop form submission
+        }
+    }
+
+        // Mobile Validation (only digits, 10+ characters)
+        
+
+        // General Validation (check if any field is empty)
+        if (!firstName || !lastName || !email || !street || !city || !state || !zipcode || !country || !mobile) {
+            showAlert("All fields are required.");
+            return;
+        }
+        let addressData = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    street: street,
+    city: city,
+    state: state,
+    zipcode: zipcode,
+    country: country,
+    mobile: mobile
+};
+console.log(addressData)
+
+// Convert the object to a JSON string
+let jsonString = JSON.stringify(addressData);
+console.log(jsonString)
+setorderfull(addressData); // Send this to the backend
+
+        // If all validations pass, proceed with checkout
+        @* setOrder(); *@
+        }
+    async function setorderfull(address) {
+        showAlert("Process in Progress")
+ if(@Model.GrandTotal <=0)
+        { showAlert("Cart is Empty")
+        return;
+        }
+         const response = await fetch("/Orders/setorder", {
+            method: "POST",
+            headers: {
+                 "Content-Type": "application/json"
+            },
+            body:JSON.stringify(address)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        showAlert("Order placed successfully!");
+        console.log("Order Response:", data);
+
+    
+        @* window.location.reload(); *@
+    
+}
+</script>

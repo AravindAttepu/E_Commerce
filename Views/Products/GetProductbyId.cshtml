@@ -1,0 +1,154 @@
+﻿@model innobyte_e_commerce.Models.Product
+@{
+            var isOutOfStock = @Model.Stock <= 0;
+        }
+<div class="productcontainer">
+    <div class="singleproduct">
+        <div class="singleimg">
+            <div class="imgsize" style="position: relative;">
+                <img src="@Model.ImageUrl" alt="" style="opacity: @(isOutOfStock ? "0.5" : "1");">
+              @if (isOutOfStock)
+{
+    <div class="out-of-stock-label">Out of Stock</div>
+}
+            </div>
+        </div>
+        
+        <div class="singleproductdata">
+            <div class="sproductcategory">@Model.category</div>
+            <div class="sproducttitle">@Model.ProductName</div>
+            <div class="sproductdescription">@Model.Description</div>
+            <div class="sproductprice"><span>Rs:</span>${formatPrice(product.price)}</div>
+        </div>
+        <div class="product-btns">
+             <button class="btn btn-success" onclick="addToCart(@Model.ProductId)" 
+            @(isOutOfStock ? "disabled style='cursor: not-allowed; opacity: 0.6;'" : "")>
+            Add to Cart
+        </button>
+        </div>
+    </div>
+
+    <div class="similarproducts">
+        <div class="similarheading">Similar Products</div>
+        <div class="productslist1" id="similarbox">
+            <!-- Similar products will be loaded here -->
+             @* <div class="product">
+                    <div class="productimg" onclick="goToProductPage(${product.productId})"style="position: relative;" >
+                        <img src="${product.imageUrl}" alt="${product.productName}" style="opacity: ${isOutOfStock ? 0.5 : 1};">
+                            ${isOutOfStock ? `<div class="out-of-stock-label">Out of Stock</div>` : ""}
+                    </div>
+                    <div class="productdata1">
+                        <div class="producttitle1">${product.productName}</div>
+                        <div class="productprice"><span>Rs: </span><span>${formatPrice(product.price)}</span></div>
+                    </div>
+                    <div class="product-buttons">
+                        <button onclick="addToCart(${product.productId})">Add to Cart</button>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+                 <div class="product">
+                    <div class="productimg" onclick="goToProductPage(${product.productId})"style="position: relative;" >
+                        <img src="${product.imageUrl}" alt="${product.productName}" style="opacity: ${isOutOfStock ? 0.5 : 1};">
+                            ${isOutOfStock ? `<div class="out-of-stock-label">Out of Stock</div>` : ""}
+                    </div>
+                    <div class="productdata1">
+                        <div class="producttitle1">${product.productName}</div>
+                        <div class="productprice"><span>Rs: </span><span>${formatPrice(product.price)}</span></div>
+                    </div>
+                    <div class="product-buttons">
+                        <button onclick="addToCart(${product.productId})">Add to Cart</button>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+                 <div class="product">
+                    <div class="productimg" onclick="goToProductPage(${product.productId})"style="position: relative;" >
+                        <img src="${product.imageUrl}" alt="${product.productName}" style="opacity: ${isOutOfStock ? 0.5 : 1};">
+                            ${isOutOfStock ? `<div class="out-of-stock-label">Out of Stock</div>` : ""}
+                    </div>
+                    <div class="productdata1">
+                        <div class="producttitle1">${product.productName}</div>
+                        <div class="productprice"><span>Rs: </span><span>${formatPrice(product.price)}</span></div>
+                    </div>
+                    <div class="product-buttons">
+                        <button onclick="addToCart(${product.productId})">Add to Cart</button>
+                        <button>Buy Now</button>
+                    </div>
+                </div> *@
+                
+        </div>
+    </div>
+</div>
+
+<script>
+    const similarbox = document.getElementById("similarbox");
+    let tempdata = [];
+
+    async function fetchproducts() {
+        try {
+            const response = await fetch('getproducts');
+            if (!response.ok) throw new Error("Failed to fetch products");
+
+            const data = await response.json();
+            console.log("Fetched Data:", data);
+
+            tempdata = data;
+            displayproducts(tempdata.products);
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+    }
+
+    function addToCart(productId) {
+     
+        let productdata = tempdata.products.find(p => p.productId === productId);
+        if (productdata) {
+          
+            console.log(productdata)
+            addtodatabase(productdata); // Assuming `addtocart` is defined elsewhere
+
+            
+        
+        }
+    }
+
+    function displayproducts(products) {
+        let productcategory = "@Model.category";
+        let productname = "@Model.ProductName";
+
+        let filteredProducts = products
+        .filter(p => p.category === productcategory && p.productName !== productname).slice(0, 6);
+        console.log("Filtered Products:", filteredProducts);
+
+        similarbox.innerHTML = '';
+        filteredProducts.forEach(product => {
+             const isOutOfStock = product.stock <= 0;
+            const productHTML = `
+                <div class="product">
+                    <div class="productimg" onclick="goToProductPage(${product.productId})"style="position: relative;" >
+                        <img src="${product.imageUrl}" alt="${product.productName}" style="opacity: ${isOutOfStock ? 0.5 : 1};">
+                            ${isOutOfStock ? `<div class="out-of-stock-label">Out of Stock</div>` : ""}
+                    </div>
+                    <div class="productdata1">
+                        <div class="producttitle1">${product.productName}</div>
+                        <div class="productprice"><span>Rs: </span><span>${formatPrice(product.price)}</span></div>
+                    </div>
+                    <div class="product-buttons">
+                        <button onclick="addToCart(${product.productId})">Add to Cart</button>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+            `;
+            similarbox.innerHTML += productHTML;
+        });
+    }
+
+    function goToProductPage(productId) {
+        window.location.href = `/products/${productId}`;
+    }
+
+    function formatPrice(price) {
+        return price.toLocaleString('en-IN');
+    }
+
+    fetchproducts();
+</script>

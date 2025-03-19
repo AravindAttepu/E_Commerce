@@ -1,0 +1,102 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Linq
+@model List<innobyte_e_commerce.DTO.View_Admin_orders>
+    @{
+    Layout = "~/Views/Shared/_AdminMain.cshtml";
+}
+
+
+<h2 class="text-center mt-4">Orders</h2>
+
+<div class="container mt-4">
+    @foreach (var masterOrder in  Model.AsEnumerable().Reverse())
+    {
+ 
+  string rawAddress = masterOrder.MasterOrder.Address;
+
+    // Deserialize JSON safely
+    dynamic addressObj = JsonConvert.DeserializeObject<dynamic>(rawAddress);
+
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Master Order ID: @masterOrder.MasterOrder.MasterID</h5>
+                <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                        onclick="showOrders(@masterOrder.MasterOrder.MasterID)">
+                    View Details
+                </button>
+            </div>
+            <div class="card-body orderdetailadmin" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                <div class="address">
+             
+    
+
+                     <p><strong> @addressObj.FirstName  @addressObj.LastName</strong></p>
+                     <p>@addressObj.Email</p>
+                     <p>@addressObj.Street,@addressObj.City</p>
+                     <p>@addressObj.State, @addressObj.Country -  @addressObj.Zipcode</p>
+                     <p>Mobile: @addressObj.Mobile</p>
+                     <p></p>
+                </div>
+                <div class="orderdetails">
+                    <p>Method: @masterOrder.MasterOrder.PaymentMethod</p>
+                    <p>Date: @masterOrder.MasterOrder.Date</p>
+                </div>
+                <div class="price">
+                <p><strong>Grand Total:</strong> ₹@masterOrder.MasterOrder.GrandTotal.ToString("N2")</p>
+                </div>
+               
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>User Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderTableBody">
+                        <!-- Data will be injected here via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showOrders(masterOrderId) {
+        var orders = @Html.Raw(Json.Serialize(Model));
+        console.log(orders)
+        var selectedOrder = orders.find(o => o.masterOrder.masterID == masterOrderId);
+console.log(selectedOrder)
+        var tableBody = document.getElementById("orderTableBody");
+        tableBody.innerHTML = "";
+        if (selectedOrder && selectedOrder.orders) {
+            selectedOrder.orders.forEach(order => {
+                    var row = `<tr>
+                                <td>${order.orderID}</td>
+                                <td>${order.product.productId}</td>
+                                <td>${order.product.productName}</td>
+                                <td>${order.user.name}</td>
+                              </tr>`;
+                    tableBody.innerHTML += row;
+                });
+        
+        }
+    }
+</script>

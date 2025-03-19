@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" type="image/png" href="/assets/images/websitelogo.png">
+    <title>@ViewData["Title"]E-commerce</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/E_commerce.styles.css" asp-append-version="true" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+     <div id="loading">
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <div class="mainlayout">
+             <div id="sidebarModal" class="sidebar-modal">
+        <h3>Menu</h3>
+        <div onclick="window.location.href='/Home'"><p>Home</p></div>
+        <div onclick="window.location.href='/Products'"><p>Collections</p></div>
+        @if (Context.Request.Cookies["AuthToken"] != null)
+                        {
+        <div onclick="window.location.href='/User#Orders'"><p>Orders</p></div>
+       
+        <div onclick="window.location.href='/Auth/Logout'"><p>Logout</p></div>
+        }
+        else{
+             <div onclick="window.location.href='/Auth/Login'"><p>Login</p></div>
+              <div onclick="window.location.href='/Auth/register'"><p>Register</p></div>
+        }
+         <div onclick="window.open('/Admin', '_blank')"><p>Admin Panel</p></div>
+        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+        <button class="close-btn" onclick="closeSidebar()">Close</button>
+    </div>
+   <div id="alertContainer" class="alert-container"></div>
+
+    <!-- Overlay for clicking outside -->
+    <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+            <div class="nav d-flex justify-content-between align-items-center">
+                <div class="navlogo" onclick="window.location='/'" style="cursor:pointer;">
+                    <img style="height:inherit" src="/assets/images/websitelogo.png" asp-append-version="true" alt="Logo">
+                    <div class="logotext">E-commerce</div>
+                </div>
+                <div class="navitems">
+                    <ul>
+                        <a asp-action="Index" asp-controller="Home"><li>Home</li></a>
+                        <a asp-action="Index" asp-controller="Products"><li>Explore</li></a>
+
+                      @if (Context.Request.Cookies["AuthToken"] != null)
+                        {
+                            <!-- If the user is authenticated, show Profile and Logout -->
+                           
+                           
+                             <a asp-action="Logout" asp-controller="Auth"><li>Logout</li></a>
+                             
+                        }
+                        else
+                        {
+                            <!-- If user is NOT authenticated, show Register & Login -->
+                            <a asp-action="Register" asp-controller="Auth"><li>Register</li></a>
+                            <a asp-action="Login" asp-controller="Auth"><li>Login</li></a>
+                           
+                        }
+                         <a asp-action="Index" asp-controller="Admin"  target="_blank"><li>Admin</li></a>
+                    </ul>
+                </div>
+            <div class="othertools">
+                <div class="search" id="searchicon"><i class='bx bx-search'></i></div>
+                
+                      @if (Context.Request.Cookies["AuthToken"] != null)
+                        {
+                <div class="user" onclick="window.location.href='/User'"><i class='bx bxs-user'></i></div>
+                <div class="cart" onclick="window.location.href='/User#cartblock'"><i class='bx bxs-cart-alt' ></i></div>
+                }
+                 <div class="cart sidebar"  onclick="openSidebar()"> <i class='bx bx-bar-chart bx-rotate-270' ></i></i></div> 
+               
+
+            </div>
+            </div>
+            <div class="searchbar hide" id="searchbar">
+                <div class="searchbox">
+                    <div><input type="text" placeholder="Search" id="searchinput"></div>
+                    <div class="searchbtn" id="searchbtn">Search</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container1">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top text-muted">
+        <div class="footer">
+            <div class="companyinfo">
+                <h3>E-Commerce</h3>
+                
+                <div class="companyaddress">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="companyservices">
+                <div class="services1">
+                    <dl>
+                        <dt>COMPANY</dt>
+                        <dd>Home</dd>
+                        <dd>About Us</dd>
+                        <dd>Delivery</dd>
+                        <dd>Privacy Policy</dd>
+                    
+                    </dl>
+                </div>
+            </div>
+
+            <div class="companysocial">
+                <h4>Follow Us</h4>
+                <p>
+                    <a href="#">Facebook</a> |
+                    <a href="#">Twitter</a> |
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+            
+        </div>
+    </footer>
+<script>
+    var searchinput= document.getElementById("searchinput");
+var searchbar = document.getElementById("searchbar");
+var searchicon = document.getElementById("searchicon");
+var searchbtn = document.getElementById("searchbtn");
+
+searchbtn.addEventListener("click", () => {
+    console.log(searchinput.value.trim())
+    searchproducts(searchinput.value.trim())
+});
+
+searchicon.addEventListener("click", () => {
+    searchbar.classList.toggle("hide");
+});
+</script>
+<script>
+    document.querySelectorAll('[b-6af2g0m0p0]').forEach(el => el.removeAttribute('b-6af2g0m0p0'));
+</script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/cart.js" asp-append-version="true"></script>
+
+      @await RenderSectionAsync("Scripts", required: false)
+
+
+
+</body>
+</html>

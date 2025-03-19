@@ -1,0 +1,78 @@
+﻿@{
+ 
+}
+
+<div class="container mt-5 " >
+    <div class="row justify-content-center">
+        <div class="col-md-4" style="height: 100vh;">
+            <div class="card shadow-lg p-4 backdrop">
+                <h3 class="text-center mb-4">Login</h3>
+                <form asp-action="login" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input  name="userEmail" type="Email" class="form-control" placeholder="Enter Email">
+                    </div>
+
+                     <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <div class="input-group">
+                        <input id="password" name="Password" type="password" class="form-control" placeholder="Enter Password" required>
+                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </div>
+                </form>
+
+                <p class="text-center mt-3">
+                    Don't have an account? <a asp-action="Register" asp-controller="Auth">Register</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: '@TempData["ErrorMessage"]'
+        });
+    </script>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: '@TempData["SuccessMessage"]'
+        });
+    </script>
+}
+
+
+<script>
+    document.getElementById("togglePassword").addEventListener("click", function () {
+        let passwordInput = document.getElementById("password");
+        let icon = this.querySelector("i");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove("bi-eye");
+            icon.classList.add("bi-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove("bi-eye-slash");
+            icon.classList.add("bi-eye");
+        }
+    });
+</script>

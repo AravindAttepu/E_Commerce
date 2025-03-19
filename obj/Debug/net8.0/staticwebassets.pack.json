@@ -1,0 +1,457 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\E_commerce.bundle.scp.css",
+      "PackagePath": "staticwebassets\\E_commerce.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\customercare.png",
+      "PackagePath": "staticwebassets\\assets\\images\\customercare.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\discount.png",
+      "PackagePath": "staticwebassets\\assets\\images\\discount.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\imac.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\imac.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\razorpay.png",
+      "PackagePath": "staticwebassets\\assets\\images\\razorpay.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\samsunglogo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\samsunglogo.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\samsungs25.png",
+      "PackagePath": "staticwebassets\\assets\\images\\samsungs25.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\shipping.png",
+      "PackagePath": "staticwebassets\\assets\\images\\shipping.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\stripe.png",
+      "PackagePath": "staticwebassets\\assets\\images\\stripe.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\images\\websitelogo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\websitelogo.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\assets\\userimages\\defaultuser.jpg",
+      "PackagePath": "staticwebassets\\assets\\userimages\\defaultuser.jpg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\0d5b35df-ca37-4120-a712-d5f84a4704cf.jpeg",
+      "PackagePath": "staticwebassets\\images\\0d5b35df-ca37-4120-a712-d5f84a4704cf.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\256234a1-e313-4c44-8ce0-284276ac0b60.jpeg",
+      "PackagePath": "staticwebassets\\images\\256234a1-e313-4c44-8ce0-284276ac0b60.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\31e89da9-04d8-4bb6-8794-803a8b6b86c8.jpeg",
+      "PackagePath": "staticwebassets\\images\\31e89da9-04d8-4bb6-8794-803a8b6b86c8.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\34888cbf-f5fa-4536-8c14-e649ee49c12a.jpeg",
+      "PackagePath": "staticwebassets\\images\\34888cbf-f5fa-4536-8c14-e649ee49c12a.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\34eae02c-7e02-475a-b0b6-7e2528f59b0b.jpeg",
+      "PackagePath": "staticwebassets\\images\\34eae02c-7e02-475a-b0b6-7e2528f59b0b.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\41075302-21de-43a1-b529-dfd160fa86c6.jpeg",
+      "PackagePath": "staticwebassets\\images\\41075302-21de-43a1-b529-dfd160fa86c6.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\411ff5ee-2a11-4fdf-878a-86c654e3ed0c.png",
+      "PackagePath": "staticwebassets\\images\\411ff5ee-2a11-4fdf-878a-86c654e3ed0c.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\47e1481f-c63b-4fc7-b4a1-9488fde4b118.jpeg",
+      "PackagePath": "staticwebassets\\images\\47e1481f-c63b-4fc7-b4a1-9488fde4b118.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\4b3ece45-4e08-4503-8ddd-194af452b076.png",
+      "PackagePath": "staticwebassets\\images\\4b3ece45-4e08-4503-8ddd-194af452b076.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\4b957e9e-2d6e-4e77-a9bd-14849a6205e1.jpeg",
+      "PackagePath": "staticwebassets\\images\\4b957e9e-2d6e-4e77-a9bd-14849a6205e1.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\50ee52d5-02da-4644-b001-6632a66daee5.jpeg",
+      "PackagePath": "staticwebassets\\images\\50ee52d5-02da-4644-b001-6632a66daee5.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\52c88c11-818f-42a3-b03f-4d17c57eaf37.jpeg",
+      "PackagePath": "staticwebassets\\images\\52c88c11-818f-42a3-b03f-4d17c57eaf37.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\5952e41c-07b2-4728-a70d-3787da1fa324.jpeg",
+      "PackagePath": "staticwebassets\\images\\5952e41c-07b2-4728-a70d-3787da1fa324.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\70926c89-ad63-49c5-bac4-64051832a15e.jpeg",
+      "PackagePath": "staticwebassets\\images\\70926c89-ad63-49c5-bac4-64051832a15e.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\7d1becb8-1541-40a1-98b8-65131a492268.jpeg",
+      "PackagePath": "staticwebassets\\images\\7d1becb8-1541-40a1-98b8-65131a492268.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\7df9e07d-7f09-4ed3-aa96-aa454c6e743e.jpeg",
+      "PackagePath": "staticwebassets\\images\\7df9e07d-7f09-4ed3-aa96-aa454c6e743e.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\8cf4db3a-26f5-447d-91ea-9cbe0d172ebf.jpeg",
+      "PackagePath": "staticwebassets\\images\\8cf4db3a-26f5-447d-91ea-9cbe0d172ebf.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\8d30d29e-24e8-4be3-82ea-a08bf622bad2.png",
+      "PackagePath": "staticwebassets\\images\\8d30d29e-24e8-4be3-82ea-a08bf622bad2.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\9b0d4015-6537-4c19-a6ad-861957edd40c.png",
+      "PackagePath": "staticwebassets\\images\\9b0d4015-6537-4c19-a6ad-861957edd40c.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\a7b9916c-bfea-4aa8-84d5-a3385b61e23d.jpeg",
+      "PackagePath": "staticwebassets\\images\\a7b9916c-bfea-4aa8-84d5-a3385b61e23d.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\ab73bf1c-cd0f-44e9-b2a7-2ea38839aa0c.jpeg",
+      "PackagePath": "staticwebassets\\images\\ab73bf1c-cd0f-44e9-b2a7-2ea38839aa0c.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\ad07a83c-bced-4ec8-9a10-a7b03a5a93b4.jpeg",
+      "PackagePath": "staticwebassets\\images\\ad07a83c-bced-4ec8-9a10-a7b03a5a93b4.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\af2dd35f-f71a-4bcf-ad8f-47afb0472a90.jpeg",
+      "PackagePath": "staticwebassets\\images\\af2dd35f-f71a-4bcf-ad8f-47afb0472a90.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\boat_wireless.jpg",
+      "PackagePath": "staticwebassets\\images\\boat_wireless.jpg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\c8794f73-1388-453e-8d17-c645f7277955.jpeg",
+      "PackagePath": "staticwebassets\\images\\c8794f73-1388-453e-8d17-c645f7277955.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\d951ded3-dea9-4258-b4eb-741c2df8b54d.jpeg",
+      "PackagePath": "staticwebassets\\images\\d951ded3-dea9-4258-b4eb-741c2df8b54d.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\dd63e7b9-af68-4655-b073-1490075f3eab.jpeg",
+      "PackagePath": "staticwebassets\\images\\dd63e7b9-af68-4655-b073-1490075f3eab.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\de5e259c-d638-4d7e-ac89-196b703d0a0f.jpeg",
+      "PackagePath": "staticwebassets\\images\\de5e259c-d638-4d7e-ac89-196b703d0a0f.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\e42274a1-f361-40a4-acf7-ad7c6129914b.jpeg",
+      "PackagePath": "staticwebassets\\images\\e42274a1-f361-40a4-acf7-ad7c6129914b.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\ebe64013-4f6c-4abb-9de4-c8c5b8bd86c0.png",
+      "PackagePath": "staticwebassets\\images\\ebe64013-4f6c-4abb-9de4-c8c5b8bd86c0.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\f50cc2fe-2699-4d9c-acf5-d3164ce0e26f.jpeg",
+      "PackagePath": "staticwebassets\\images\\f50cc2fe-2699-4d9c-acf5-d3164ce0e26f.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\ifb_8kg_5star.jpeg",
+      "PackagePath": "staticwebassets\\images\\ifb_8kg_5star.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\iphone_14.jpeg",
+      "PackagePath": "staticwebassets\\images\\iphone_14.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\mitv_aseries_80cm.jpeg",
+      "PackagePath": "staticwebassets\\images\\mitv_aseries_80cm.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\images\\realme_p1_5g.jpeg",
+      "PackagePath": "staticwebassets\\images\\realme_p1_5g.jpeg"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\js\\cart.js",
+      "PackagePath": "staticwebassets\\js\\cart.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\js\\upload.js",
+      "PackagePath": "staticwebassets\\js\\upload.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\.net projects\\E_commerce\\E_commerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.E_commerce.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.E_commerce.props",
+      "PackagePath": "build\\E_commerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.E_commerce.props",
+      "PackagePath": "buildMultiTargeting\\E_commerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.E_commerce.props",
+      "PackagePath": "buildTransitive\\E_commerce.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
