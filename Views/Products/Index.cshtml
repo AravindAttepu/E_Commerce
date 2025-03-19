@@ -101,13 +101,13 @@
         priceValue.textContent = value; 
     });
     applypricefilter.addEventListener("click", function()
-    {
+    {var pricechangedata= tempdata;
  @* tempdata =JSON.parse(JSON.stringify(data.products)); *@
         let price =parseInt(priceSlider.value);
-         tempdata = tempdata.filter(product => product.price <= price);
+         pricechangedata = pricechangedata.filter(product => product.price <= price);
         console.log("Filtered Products:", tempdata);
-        console.log(tempdata)
-        fetchProducts(tempdata);
+        console.log(pricechangedata)
+        fetchProducts(pricechangedata);
     }
     );
 
@@ -138,6 +138,7 @@ async function filterproducts(sortcategory, dropcategory)
       {
 
         categoryfilter(sortcategory)
+        document.getElementById("sortDropdown").textContent=  "Relevance"
         console.log("category called")
       }
       

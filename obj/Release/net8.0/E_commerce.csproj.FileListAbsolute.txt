@@ -446,3 +446,4 @@ D:\.net projects\E_commerce\E_commerce\obj\Release\net8.0\refint\E_commerce.dll
 D:\.net projects\E_commerce\E_commerce\obj\Release\net8.0\E_commerce.pdb
 D:\.net projects\E_commerce\E_commerce\obj\Release\net8.0\E_commerce.genruntimeconfig.cache
 D:\.net projects\E_commerce\E_commerce\obj\Release\net8.0\ref\E_commerce.dll
+D:\.net projects\E_commerce\E_commerce\obj\Release\net8.0\E_commerce.sourcelink.json

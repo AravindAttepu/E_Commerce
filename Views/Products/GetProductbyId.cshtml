@@ -18,7 +18,10 @@
             <div class="sproductcategory">@Model.category</div>
             <div class="sproducttitle">@Model.ProductName</div>
             <div class="sproductdescription">@Model.Description</div>
-            <div class="sproductprice"><span>Rs:</span>${formatPrice(product.price)}</div>
+          @{
+    var formattedPrice = Model.Price.ToString("N2"); 
+}
+            <div class="sproductprice"><span>Rs:</span>@formattedPrice</div>
         </div>
         <div class="product-btns">
              <button class="btn btn-success" onclick="addToCart(@Model.ProductId)" 

@@ -446,8 +446,4 @@ D:\.net projects\E_commerce\E_commerce\obj\Debug\net8.0\refint\E_commerce.dll
 D:\.net projects\E_commerce\E_commerce\obj\Debug\net8.0\E_commerce.pdb
 D:\.net projects\E_commerce\E_commerce\obj\Debug\net8.0\E_commerce.genruntimeconfig.cache
 D:\.net projects\E_commerce\E_commerce\obj\Debug\net8.0\ref\E_commerce.dll
-D:\.net projects\E_commerce\E_commerce\bin\Debug\net8.0\publish\web.config
-D:\.net projects\E_commerce\E_commerce\bin\Debug\net8.0\publish\appsettings.Development.json
-D:\.net projects\E_commerce\E_commerce\bin\Debug\net8.0\publish\appsettings.json
-D:\.net projects\E_commerce\E_commerce\bin\Debug\net8.0\publish\E_commerce.deps.json
-D:\.net projects\E_commerce\E_commerce\bin\Debug\net8.0\publish\E_commerce.runtimeconfig.json
+D:\.net projects\E_commerce\E_commerce\obj\Debug\net8.0\E_commerce.sourcelink.json
